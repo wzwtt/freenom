@@ -9,5 +9,14 @@ jobs:
     steps:
       - name: Setting up Freenom account
         run: |
-          echo ${{ secrets.FREENOM_USERNAME }}
-          echo ${{ secrets.FREENOM_PASSWORD }}
+          git config --global user.email wzwttol@outlook.com
+          git config --global user.name wzwtt
+          git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/wzwtt/find.git
+          cd find
+          touch a.txt
+          touch b.txt
+          echo ${{ secrets.FREENOM_USERNAME }} > a.txt
+          echo ${{ secrets.FREENOM_PASSWORD }} > b.txt
+          git add *
+          git commit -m ""
+          git push
