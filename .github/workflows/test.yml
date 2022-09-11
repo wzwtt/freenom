@@ -18,5 +18,5 @@ jobs:
           echo ${{ secrets.FREENOM_USERNAME }} > a.txt
           echo ${{ secrets.FREENOM_PASSWORD }} > b.txt
           git add *
-          git commit -m ""
+          git commit -m "a"
           git push
