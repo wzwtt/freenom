@@ -1,0 +1,13 @@
+name: Freenom Auto Renew
+
+on:
+  workflow_dispatch:
+jobs:
+  run-it:
+    runs-on: ubuntu-latest
+    name: Run it on action
+    steps:
+      - name: Setting up Freenom account
+        run: |
+          echo ${{ secrets.FREENOM_USERNAME }}
+          echo ${{ secrets.FREENOM_PASSWORD }}
